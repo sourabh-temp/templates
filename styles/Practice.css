@@ -1,0 +1,177 @@
+/* General Styles */
+.language-page {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.page-header h3 {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.language-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.language-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+  background-color: #f9f9f9;
+}
+
+.language-card.active {
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+}
+
+.language-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.language-card p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Icon styles for different languages */
+.language-icon.ruby {
+  background-color: #d14e56;
+  color: white;
+}
+
+.language-icon.js {
+  background-color: #f0db4f;
+  color: #323330;
+}
+
+.language-icon.python {
+  background-color: #306998;
+  color: white;
+}
+
+.language-icon.cpp {
+  background-color: #00599c;
+  color: white;
+}
+
+.language-icon.java {
+  background-color: #ff6f00;
+  color: white;
+}
+
+.language-icon.go {
+  background-color: #00ADD8;
+  color: white;
+}
+
+.language-icon.rust {
+  background-color: #dea584;
+  color: white;
+}
+
+.language-icon.swift {
+  background-color: #f05138;
+  color: white;
+}
+
+.language-icon.php {
+  background-color: #8993be;
+  color: white;
+}
+
+.language-icon.kotlin {
+  background-color: #0095d5;
+  color: white;
+}
+
+/* Language Details */
+.language-details {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-details h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.language-details p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .language-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .language-card {
+    padding: 15px;
+  }
+
+  .language-details h2 {
+    font-size: 1.8em;
+  }
+
+  .language-details p {
+    font-size: 1.1em;
+  }
+}

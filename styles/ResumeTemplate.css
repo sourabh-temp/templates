@@ -1,0 +1,125 @@
+/* styles.css */
+
+/* Root Variables for Colors and Shadows */
+:root {
+  --bg-gradient-start: #f9fafb;
+  --bg-gradient-end: #f3f4f6;
+  --text-gray-dark: #1f2937;
+  --text-gray-light: #4b5563;
+  --primary-blue: #2563eb;
+  --secondary-blue: #1d4ed8;
+  --primary-green: #10b981;
+  --secondary-green: #16a34a;
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Container for the entire section */
+.resume-content-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom right, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
+/* Content Side (Left) */
+.left-side {
+  width: 100%;
+  max-width: 50%;
+  padding: 24px 40px;
+  padding-right: 64px;
+}
+
+.left-side h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--text-gray-dark);
+  margin-bottom: 24px;
+}
+
+.left-side p {
+  font-size: 1.125rem;
+  color: var(--text-gray-light);
+  margin-bottom: 32px;
+  line-height: 1.75;
+}
+
+.left-side ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 32px;
+  color: var(--text-gray-light);
+}
+
+.left-side ul li {
+  margin-bottom: 8px;
+}
+
+.left-side .button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 8px;
+}
+
+.left-side .button-blue {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.left-side .button-blue:hover {
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+}
+
+.left-side .button-green {
+  background: linear-gradient(to right, #10b981, #16a34a);
+  color: white;
+}
+
+.left-side .button-green:hover {
+  background: linear-gradient(to right, #16a34a, #10b981);
+}
+
+/* Image Side (Right) */
+.right-side {
+  width: 100%;
+  max-width: 50%;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.right-side .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.right-side .image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  transform: rotate(10deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.right-side .image-gradient {
+  position: absolute;
+  inset-y: 0;
+  left: 0;
+  width: 33%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
+  border-radius: 16px;
+}
+

@@ -1,0 +1,95 @@
+/* RubyQA Page Styles */
+.ruby-qa-page {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.qa-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.qa-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.qa-header h3 {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.qa-list {
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.qa-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.qa-item:hover {
+  transform: translateY(-5px);
+  background-color: #f9f9f9;
+}
+
+.qa-question {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+.qa-question.active {
+  color: #f39c12;
+}
+
+.qa-answer {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #555;
+}
+
+.qa-answer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qa-item {
+    padding: 15px;
+  }
+
+  .qa-header h1 {
+    font-size: 2em;
+  }
+
+  .qa-header h3 {
+    font-size: 1em;
+  }
+
+  .qa-answer {
+    font-size: 0.9em;
+  }
+}
+.back-button {
+  background-color: #7491b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #fff;
+  color: #000;
+}

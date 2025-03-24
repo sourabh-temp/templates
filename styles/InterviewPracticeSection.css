@@ -1,0 +1,108 @@
+.inter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 40px 24px;
+  background: linear-gradient(to bottom right, #f7fafc, #e2e8f0);
+}
+
+.inter-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 640px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: rotate(-10deg);
+}
+
+.imageWrapperRight {
+  transform: rotate(10deg);
+}
+
+.imageGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
+}
+
+.textWrapper {
+  width: 100%;
+  max-width: 640px;
+  padding: 24px;
+  text-align: center;
+}
+
+.textWrapperLeft {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.text {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-bottom: 32px;
+  line-height: 1.75;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #3182ce, #2b6cb0);
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #2b6cb0, #2c5282);
+}
+
+.buttonGreen {
+  background: linear-gradient(to right, #48bb78, #38a169);
+}
+
+.buttonGreen:hover {
+  background: linear-gradient(to right, #38a169, #2f855a);
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .imageWrapper {
+    width: 50%;
+    margin-right: 16px;
+  }
+
+  .textWrapper {
+    width: 50%;
+    text-align: left;
+  }
+}

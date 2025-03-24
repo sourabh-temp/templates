@@ -1,0 +1,189 @@
+/* General Menu Bar Styles */
+.menuBar {
+  position: relative;
+  background: linear-gradient(135deg, #1f6e99, #2980b9); /* Gradient background */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 100;
+  font-family: 'Arial', sans-serif;
+}
+
+.menuToggle {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.menuList {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+}
+
+.menuItem {
+  position: relative;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.menuItem:hover {
+  background-color: #16a085; /* Modern teal hover color */
+  color: white;
+  transform: scale(1.05);
+}
+
+.menuTitle {
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.dropdown {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #34495e;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Add delay for smooth visibility transition */
+  z-index: 10;
+}
+
+.menuItem:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.dropdown li {
+  padding: 8px 0;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: all 0.3s ease;
+  padding-left: 10px;
+}
+
+.dropdown li a:hover {
+  background-color: #16a085;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .menuList {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1f6e99, #2980b9);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .menuList.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menuItem {
+    padding: 15px 25px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #34495e;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .menuItem:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+  }
+
+  .menuToggle {
+    display: block;
+    z-index: 1001; /* Ensure the hamburger icon stays on top */
+  }
+
+  .dropdown {
+    position: static;
+    display: block;
+    background-color: #34495e;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 0;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown li a {
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .dropdown li a:hover {
+    background-color: #16a085;
+    color: white;
+  }
+}
+
+/* Hamburger Icon Animation */
+.menuToggle {
+  position: relative;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.menuToggle.open {
+  transform: rotate(90deg);
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+.menuList a:focus,
+.menuItem:focus {
+  outline: 3px solid #16a085; /* Add focus outline for accessibility */
+  outline-offset: 4px;
+}

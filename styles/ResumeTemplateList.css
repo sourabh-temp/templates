@@ -1,0 +1,163 @@
+/* Resume Page Styles */
+.resume-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Step Guide Card */
+.step-guide-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-guide-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.step-list {
+  margin-bottom: 40px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.step-icon-container {
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.step-text {
+  max-width: 350px;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Button styles */
+.continue-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: #45a049;
+}
+
+/* Resume Template Section */
+.choose-template-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.template-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.template-card:hover {
+  transform: scale(1.05);
+}
+
+.template-selected {
+  border: 3px solid #2196F3;
+}
+
+.template-image-container {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.template-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer Buttons */
+.footer-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.skip-btn {
+  font-size: 1rem;
+  color: #2196F3;
+  cursor: pointer;
+}
+
+.skip-btn:hover {
+  text-decoration: underline;
+}
+
+.use-template-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #2196F3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.use-template-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.use-template-btn:hover {
+  background-color: #1976D2;
+}
+
+/* Add different background colors for each step icon */
+.step-bg-green {
+  background-color: #e8f5e9;
+}
+
+.step-bg-blue {
+  background-color: #e3f2fd;
+}
+
+.step-bg-yellow {
+  background-color: #fffde7;
+}

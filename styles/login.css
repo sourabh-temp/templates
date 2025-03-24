@@ -1,0 +1,105 @@
+/* Basic container styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+}
+
+.login-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Title styling */
+.login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form input fields */
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button styles */
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #2196F3,#4CAF50);
+}
+
+.submit-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Alert box styling */
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.alert.error {
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+}
+
+.alert.success {
+  background-color: #d1fae5;
+  border: 1px solid #6ee7b7;
+  color: #064e3b;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+.forgot-password a:hover {
+  color: #4f46e5;
+}
+
+/* Signup link and button */
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signup-btn {
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+

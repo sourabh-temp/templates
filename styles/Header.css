@@ -1,0 +1,127 @@
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logoImage {
+  height: 67px;
+  width: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+  margin: 0 15px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #f0a500;
+}
+
+.mobileNavButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: #007bff;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  padding: 10px 0;
+}
+
+.combinedButton {
+  background: #f0a500;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.combinedButton:hover {
+  background: #e09e00;
+}
+
+/* Styles for the Search Bar Overlay */
+.search-bar-overlay {
+  position: fixed;
+  top: 60px; /* Just below the header */
+  left: 0;
+  right: 0;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  z-index: 1000; /* Ensure it's on top of the content */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.search-bar-overlay .search-input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileNavButton {
+    display: block;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+
+  .combinedButton {
+    margin-top: 10px;
+  }
+
+  /* Adjust search input for mobile */
+  .search-bar-overlay .search-input {
+    width: 80%;
+  }
+}
