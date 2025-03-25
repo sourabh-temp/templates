@@ -1,0 +1,29 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-main {
+  display: flex;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 10px;
+}
+.welcome-message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #555;
+}
+
+.welcome-message h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.welcome-message p {
+  font-size: 18px;
+  color: #777;
+}

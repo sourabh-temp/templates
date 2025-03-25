@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import '@/styles/Product.css';
 import Image from "next/image";
@@ -12,25 +12,13 @@ const Loader = () => (
   </div>
 );
 
-interface ProductType {
-  id: number;
-  name: string;
-  status: 'publish' | 'unpublish';
-  description: string;
-  html_code: string;
-  css_code: string;
-  createdAt: string;
-  javas_code: number;
-}
-
-
 const ProductList = () => {
   const [sortOption, setSortOption] = useState('Recommended');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [products, setProducts] = useState<ProductType[]>([]);
+  const [products, setProducts] = useState([]); // Removed ProductType[] since it's JavaScript
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   const fetchTemplates = async () => {
     setLoading(true); // Start loading
@@ -58,21 +46,19 @@ const ProductList = () => {
     fetchTemplates();
   }, []);
 
-  const handleSortChange = (option: string) => {
+  const handleSortChange = (option) => {
     setSortOption(option);
     setIsMenuOpen(false); // Close the menu after selection
   };
 
-  const openModal = (productId: number) => {
+  const openModal = (productId) => {
     setSelectedProductId(productId); // Set the product ID when opening the modal
     setIsModalOpen(true); // Open modal
-    // document.body.classList.add('modal-open');
   };
 
   const closeModal = () => {
     setSelectedProductId(null); // Clear selected product ID when closing modal
     setIsModalOpen(false); // Close modal
-    // document.body.classList.remove('modal-open');
   };
 
   return (
