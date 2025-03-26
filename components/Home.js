@@ -71,7 +71,7 @@ const Home = () => {
       {/* Hero Section */}
       <section style={sectionStyles}>
         <h1 style={headingStyles}>
-          <span style={{ color: '#bc5ae6' }}>Welcome</span> to Your Ultimate Template Hub
+          <span style={{ color: '#bc5ae6' }}>Welcome to Your </span> Ultimate Template Hub
         </h1>
         <p style={paragraphStyles}>
           <span style={{ color: '#bc5ae6' }}>Discover the best coding templates</span>, interview challenges, and expert tips designed to elevate your career. Start building, learning, and excelling today!

@@ -74,20 +74,14 @@ const Header = () => {
           <div className="navLink" onClick={toggleSearch}>
             <FaSearch size={20} color="black" />
           </div>
-
-          {token && (
-            <>
-              <div className="navLink" onClick={toggleNotification}>
-                <FaBell color="#fff" style={{ fontSize: '20px' }} />
-              </div>
-              <Link href="/Profile">
-                <div className="navLink">
-                  <FaUser color="#fff" style={{ fontSize: '20px' }} />
-                </div>
-              </Link>
-            </>
-          )}
-
+          <div className="navLink" onClick={toggleNotification}>
+            <FaBell color="black" style={{ fontSize: '20px' }} />
+          </div>
+          <Link href="/Profile">
+            <div className="navLink">
+              <FaUser color="black" style={{ fontSize: '20px' }} />
+            </div>
+          </Link>
           {!token ? (
             <button className="combinedButton" onClick={handleCombinedButtonClick}>
               {isSignup ? "Login" : "Signup"}

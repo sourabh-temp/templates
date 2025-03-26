@@ -5,15 +5,16 @@ import '@/styles/Footer.css';
 import Image from "next/image";
 import logo from "@/public/image/ruby.png"
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 const Footer = () => {
-
+  const router = useRouter();
   const handleAbout = () => {
-    // router.push('/about');
+    router.push('/about');
   };
 
   const handleContact = () => {
-    // router.push('/contact');
+    router.push('/contact');
   };
 
   return (

@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
-import '@/styles/login.css';  // Importing the external CSS file
+import '@/styles/login.css';
+import config from '@/components/config';
 
 const Login = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const Login = () => {
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:3001/auth/login', {
+      const response = await fetch(`${config.API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

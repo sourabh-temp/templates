@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FaFacebook, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import '@/styles/signup.css';  // Importing the external CSS file
+import config from '@/components/config';
 
 const Signup = () => {
   const router = useRouter();
@@ -47,7 +48,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/users', {
+      const response = await fetch(`${config.API_BASE_URL}/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

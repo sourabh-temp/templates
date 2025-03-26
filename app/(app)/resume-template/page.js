@@ -123,7 +123,7 @@ export default function ResumePage() {
 
               <button
                 className={`use-template-btn ${selectedTemplate ? "" : "disabled"}`}
-                onClick={() => router.push(`/resume-build?templateId=${selectedTemplate?.id}`)}
+                onClick={() => router.push(`/build-resume?templateId=${selectedTemplate?.id}`)}
                 disabled={!selectedTemplate}
               >
                 Use Template

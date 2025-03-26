@@ -8,6 +8,7 @@ import Laptop from "@/public/image/lap.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FaPlay, FaPen } from "react-icons/fa";
+import config from '@/components/config';
 
 const ViewProduct = ({ params }) => {
   const [htmlCode, setHtmlCode] = useState("");
@@ -18,14 +19,13 @@ const ViewProduct = ({ params }) => {
   const [device, setDevice] = useState("laptop");
   const [loading, setLoading] = useState(false);
 
-  // Convert templateId to number inside the component
-  const templateId = Number(params.templateId); // Convert the string to a number
+  const templateId = Number(params.templateId);
 
   const fetchTemplateData = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://temp-rails-1.onrender.com/api/template/${templateId}`
+        `${config.API_BASE_URL}/api/template/${templateId}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -44,7 +44,7 @@ const ViewProduct = ({ params }) => {
 
   useEffect(() => {
     fetchTemplateData();
-  }, [fetchTemplateData]); // Add fetchTemplateData to the dependency array
+  }, [fetchTemplateData]);
 
   const runCode = useCallback(() => {
     try {

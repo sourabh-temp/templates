@@ -35,7 +35,7 @@ const MenuBar = () => {
     {
       title: 'Resume',
       submenus: [
-        { name: 'Resume Template', link: '/resume' },
+        { name: 'Resume Template', link: '/resume-template' },
       ],
     },
     {

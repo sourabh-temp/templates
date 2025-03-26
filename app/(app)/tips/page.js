@@ -1,8 +1,12 @@
 "use client"
 import React from 'react';
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const InterviewTips = () => {
   return (
+    <>
+    <Header />
     <div className="max-w-3xl mx-auto bg-white shadow-lg p-8 rounded-lg">
       <div className="border-b pb-4 mb-6 text-center">
         <h1 className="text-3xl font-bold text-gray-800">Interview Preparation Guide</h1>
@@ -43,7 +47,7 @@ const InterviewTips = () => {
 					      <p className="mt-2">
 					        Ready to create your resume? 
 					        <a 
-					          href="/create-resume" 
+					          href="/resume-template" 
 					          className="text-blue-500 underline hover:text-blue-700"
 					        >
 					          Start building your resume now!
@@ -92,6 +96,8 @@ const InterviewTips = () => {
         </button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 

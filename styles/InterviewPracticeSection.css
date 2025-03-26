@@ -16,37 +16,37 @@
   margin-bottom: 80px;
 }
 
-.imageWrapper {
+.int-image-wrapper {
   width: 100%;
   max-width: 640px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: rotate(-10deg);
+  /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
+  /*transform: rotate(-10deg);*/
 }
 
-.imageWrapperRight {
-  transform: rotate(10deg);
+.image-wrapper-right {
+  /*transform: rotate(10deg);*/
 }
 
-.imageGradient {
+.image-gradient {
   position: absolute;
   top: 0;
   left: 0;
   width: 33%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
+  /*height: 100%;*/
+  /*background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);*/
 }
 
-.textWrapper {
+.text-wrapper {
   width: 100%;
   max-width: 640px;
   padding: 24px;
   text-align: center;
 }
 
-.textWrapperLeft {
+.text-wrapper-left {
   text-align: left;
 }
 
@@ -81,27 +81,68 @@
   background: linear-gradient(to right, #2b6cb0, #2c5282);
 }
 
-.buttonGreen {
+.button-green {
   background: linear-gradient(to right, #48bb78, #38a169);
 }
 
-.buttonGreen:hover {
+.button-green:hover {
   background: linear-gradient(to right, #38a169, #2f855a);
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .inter-row {
+    flex-direction: column;
+    margin-bottom: 40px; /* Adjust spacing for mobile */
+  }
+
+  .int-image-wrapper, .image-wrapper-right {
+    width: 100%; /* Make images full-width */
+    /*transform: rotate(0deg);  Remove rotation for better alignment on mobile */
+    margin-bottom: 16px; /* Add space between images and text */
+  }
+
+  .text-wrapper {
+    padding: 16px; /* Reduce padding on mobile */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .text-wrapper-left {
+    text-align: center; /* Ensure text is centered on mobile */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust title font size for mobile */
+    margin-bottom: 12px;
+  }
+
+  .text {
+    font-size: 1rem; /* Adjust paragraph font size for mobile */
+    margin-bottom: 24px; /* Adjust margin for better spacing */
+  }
+
+  .button {
+    padding: 10px 20px; /* Reduce button padding on mobile */
+  }
+
+  .button-green {
+    padding: 10px 20px; /* Reduce button padding for the green button on mobile */
+  }
+}
+
+/* Web/Desktop Styles (min-width: 768px) - Keep this as is */
 @media (min-width: 768px) {
-  .row {
-    display: flex;
+  .inter-row {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .imageWrapper {
+  .int-image-wrapper {
     width: 50%;
     margin-right: 16px;
   }
 
-  .textWrapper {
+  .text-wrapper {
     width: 50%;
     text-align: left;
   }

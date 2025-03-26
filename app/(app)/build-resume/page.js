@@ -1,6 +1,9 @@
 "use client";
 import { useState } from 'react';
 import '@/styles/ResumeForm.css';
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import config from '@/components/config';
 
 const ResumeForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -156,7 +159,7 @@ const ResumeForm = () => {
     });
 
     try {
-      const response = await fetch('http://localhost:3001/api/resumes', {
+      const response = await fetch(`${config.API_BASE_URL}/api/resumes`, {
         method: 'POST',
         body: formData,
       });
@@ -400,6 +403,8 @@ const ResumeForm = () => {
   };
 
   return (
+  <>
+    <Header />
     <div className="resume-form-container">
       <h1>Create Your Resume</h1>
       <form onSubmit={handleSubmit}>
@@ -425,6 +430,8 @@ const ResumeForm = () => {
         </div>
       </form>
     </div>
+    <Footer />
+  </>
   );
 };
 

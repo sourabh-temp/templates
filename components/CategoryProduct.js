@@ -5,6 +5,7 @@ import Image from "next/image";
 import kotlin from "@/public/image/field-6574455_640.jpg";
 import Link from "next/link";
 import ProductModal from '@/components/ProductModal';
+import config from './config';
 
 const capitalizeFirstLetter = (string) => {
   if (!string) return string;
@@ -22,7 +23,7 @@ const CategoryList = () => {
   const fetchCategory = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://temp-rails-1.onrender.com/api/category');
+      const response = await fetch(`${config.API_BASE_URL}/api/category`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -44,7 +45,7 @@ const CategoryList = () => {
   const fetchTemplates = async (categoryId) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://temp-rails-1.onrender.com/api/category-product?categoryid=${categoryId}`);
+      const response = await fetch(`${config.API_BASE_URL}/api/category-product?categoryid=${categoryId}`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

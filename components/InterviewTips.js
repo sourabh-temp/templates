@@ -6,6 +6,7 @@ import interviewTipsImage from '@/public/image/tips.png'; // Replace with your i
 import codingPracticeImage from '@/public/image/practice.png'; // Replace with your coding practice image
 import { useRouter } from 'next/navigation';
 import '@/styles/InterviewPracticeSection.css'; // Import the regular CSS
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const InterviewPracticeSection = () => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const InterviewPracticeSection = () => {
             height={1500}
             objectFit="cover"
           />
-          <div className="image-gradient"></div>
+          <div className="int-image-wrapper"></div>
         </div>
         <div className="text-wrapper" style={{marginTop: '56px',marginLeft: '46px'}}>
           <h2 className="title">
@@ -34,7 +35,7 @@ const InterviewPracticeSection = () => {
             onClick={() => router.push('/tips')}
             className="button"
           >
-            Interview Tips
+            <FaArrowLeft className="left-arrow" /> &nbsp; Interview Tips
           </button>
         </div>
       </div>
@@ -51,7 +52,7 @@ const InterviewPracticeSection = () => {
             onClick={() => router.push('/Practice')}
             className="button button-green"
           >
-            Coding Practice
+            Coding Practice  &nbsp; <FaArrowRight className="right-arrow" />
           </button>
         </div>
         <div className="image-wrapper image-wrapper-right">

@@ -13,7 +13,7 @@ const Modal = ({ productId, onClose }) => {
     const fetchProductData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`https://temp-rails-1.onrender.com/api/template/${productId}`);
+        const response = await fetch(`${config.API_BASE_URL}/api/template/${productId}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

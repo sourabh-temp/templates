@@ -5,6 +5,7 @@ import Image from "next/image";
 import kotlin from "@/public/image/field-6574455_640.jpg";
 import Link from 'next/link';
 import ProductModal from '@/components/ProductModal';
+import config from './config';
 
 const Loader = () => (
   <div className="loader">
@@ -23,7 +24,7 @@ const ProductList = () => {
   const fetchTemplates = async () => {
     setLoading(true); // Start loading
     try {
-      const response = await fetch('https://temp-rails-1.onrender.com/api/products');
+      const response = await fetch(`${config.API_BASE_URL}/api/products`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
