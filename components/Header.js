@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { FaBell, FaUser, FaSearch, FaHome } from 'react-icons/fa';
 import '@/styles/Header.css';
 import Link from "next/link";
-// import Image from "next/image";
-// import logo from "@/public/image/ruby.png";
 import Notification from '@/components/Notification';
 import SearchBar from '@/components/SearchBar';
 import Cookies from 'js-cookie';
@@ -20,7 +18,6 @@ const Header = () => {
   // Effect to handle client-side logic
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // const storedToken = localStorage.getItem('token');
       const storedToken = Cookies.get('userToken')?.value;
       setToken(storedToken);
     }
@@ -32,7 +29,6 @@ const Header = () => {
 
   const handleCombinedButtonClick = () => {
     setIsSignup(!isSignup);
-    // navigate('/signup');
   };
 
   const toggleNotification = () => {
@@ -55,11 +51,17 @@ const Header = () => {
       <header className="header">
         <div className="logo">
           <FaHome size={20} color="black" className="logoImage" />
-          {/*<Image src={logo} alt="Logo" className="logoImage" width={150} height={50} />*/}
         </div>
+        
+        {/* Search Icon inside Nav */}
+        <div className="msearchIcon" onClick={toggleSearch}>
+          <FaSearch size={20} color="black" />
+        </div>
+
         <button className="mobileNavButton" onClick={toggleMobileMenu}>
           ☰
         </button>
+
         <nav className="nav">
           <Link href="/">
             <div className="navLink">Home</div>
@@ -70,10 +72,12 @@ const Header = () => {
           <Link href="/templates">
             <div className="navLink">{token}Templates</div>
           </Link>
-
+          
+          {/* Search Icon inside Nav */}
           <div className="navLink" onClick={toggleSearch}>
             <FaSearch size={20} color="black" />
           </div>
+          
           <div className="navLink" onClick={toggleNotification}>
             <FaBell color="black" style={{ fontSize: '20px' }} />
           </div>
@@ -93,18 +97,19 @@ const Header = () => {
           )}
         </nav>
 
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="mobileNav">
-            <div className="navLink">Home</div>
-            <div className="navLink">About</div>
-            <div className="navLink">Templates</div>
-            <div className="navLink" onClick={toggleNotification}>
+            <div className="monavLink">Home</div>
+            <div className="monavLink">About</div>
+            <div className="monavLink">Templates</div>
+            <div className="monavLink" onClick={toggleNotification}>
               <FaBell color="#fff" />
             </div>
-            <div className="navLink">
+            <div className="monavLink">
               <FaUser color="#fff" />
             </div>
-            <button className="combinedButton" onClick={handleCombinedButtonClick}>
+            <button className="mobcombinedButton" onClick={handleCombinedButtonClick}>
               {isSignup ? "Login" : "Signup"}
             </button>
           </div>

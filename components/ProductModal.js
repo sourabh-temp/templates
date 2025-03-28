@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 import '@/styles/ProductModal.css';
+import config from './config';
 
 const Modal = ({ productId, onClose }) => {
   const [loading, setLoading] = useState(true);
